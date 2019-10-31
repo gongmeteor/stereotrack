@@ -3,15 +3,15 @@ from __future__ import division
 from __future__ import print_function
 
 import torch.utils.data as data
-from kitti_ctdet import KittiCtdet
+from .kitti_ctdet import KittiCtdet
 import numpy as np
 
 class KittiCtdetMulti(data.Dataset):
-    def __init__(self, opt, split, num):
+    def __init__(self, trainval, kitti_split, split, num):
         super(KittiCtdetMulti, self).__init__()
         self.loaders = []
         for i in range(num):
-            self.loaders.append(KittiCtdet(opt, split, i))
+            self.loaders.append(KittiCtdet(trainval, kitti_split, split, i))
 
     def __getitem__(self, index):
         ret = []

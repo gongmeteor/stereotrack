@@ -143,9 +143,9 @@ class DispRegression(nn.Module):
         pred = torch.sum(tmp * disp, 1)
         return pred
 
-class StereoMatch(nn.Module):
+class StereoTrack(nn.Module):
     def __init__(self, width, height, in_ch=3, feature_ch=32, feature_downsample=4, use_xyz=True):
-        super(StereoMatch, self).__init__()
+        super(StereoTrack, self).__init__()
         self.feature = Feature2d(in_ch, feature_ch)
         self.sample_point = SamplePoint(feature_ch, width / feature_downsample, height / feature_downsample)
         self.sample_row = SampleRow(feature_ch, width / feature_downsample, height / feature_downsample)

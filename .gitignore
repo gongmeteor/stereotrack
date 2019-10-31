@@ -1,0 +1,45 @@
+/opt
+/bin
+/lib
+\#*\#
+.\#*
+/TAGS
+/cscope.files
+/cscope.out
+*~
+debug/
+release/
+build
+cmake-build-debug/
+cmake-build-release/
+ui-build/
+.vscode/
+.idea/
+nbproject/
+core
+*.pyc
+*.log
+.DS_Store
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+SESSION.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+TAGS
+# Persistent undo
+[._]*.un~
+
+#Virtual env
+*.venv
